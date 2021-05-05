@@ -2,151 +2,34 @@
   <div class="home">
     <div id="boids-display"></div>
     <div class="content">
-      <div id="splash">
-        <div id="intro">
-          <h1>
-            Hi, I'm <br />
-            Reid Patterson
-          </h1>
-          <p>I make interactive web experiences</p>
-          <a href="/#portfolio"
-            ><p>
-              <span class="bg"></span><span class="base"></span
-              ><span class="text">My Work</span>
-            </p></a
-          >
-          <a href="/#portfolio"
-            ><p>
-              <span class="bg"></span><span class="base"></span
-              ><span class="text">Contact</span>
-            </p></a
-          >
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div id="about">
-        <div>
-          <h1>About</h1>
-          <p>
-            A recent grad from the University of British Columbia, where I
-            studied cognitive systems - a combination of psychology, computer
-            science, philosophy and linguistics.
-          </p>
-          <p>
-            I LOVE creating and teaching with interactive computer programs.
-            Everything from web apps to video games to AI, if I can make
-            interacting with the system a playful, interesting experience I'll
-            do it!
-          </p>
-        </div>
-
-        <div id="action">
-          <img
-            class="portrait"
-            :src="currentPicture"
-            @mouseenter="currentPicture = smilePic"
-            @mouseleave="currentPicture = seriousPic"
-            alt=""
-          />
-        </div>
-      </div>
+      <Splash />
+      <About />
       <div class="divider" />
-      <div id="portfolio">
-        <h1>Portfolio</h1>
-        <div class="hexagon">
-          <p>Text</p>
-        </div>
-      </div>
+      <Portfolio />
       <div class="divider"></div>
-      <div id="resume">
-        <h1>Resume</h1>
-        <h2>Education</h2>
-        <h2>Work Experience</h2>
-        <h2>Skills</h2>
-      </div>
+      <Resume />
       <div class="divider"></div>
-      <div id="contact">
-        <h1>Contact</h1>
-      </div>
+      <Contact />
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { ref } from "vue";
+import Splash from "@/components/Splash.vue"
+import About from "@/components/About.vue"
+import Portfolio from "@/components/Portfolio.vue"
+import Resume from "@/components/Resume.vue"
+import Contact from "@/components/Contact.vue"
 
 export default {
-  name: "Home",
-  setup() {
-    const serious = ref(true);
-
-    const seriousStyle = ref(100);
-    const smileStyle = ref(0);
-
-    const enterImage = () => {
-      seriousStyle.value = 0;
-      smileStyle.value = 100;
-    };
-
-    const leaveImage = () => {
-      seriousStyle.value = 100;
-      smileStyle.value = 0;
-    };
-
-    const seriousPic = require("../assets/SeriousPhone.png");
-    const smilePic = require("../assets/SmilePhone-Green.png");
-
-    const currentPicture = ref(seriousPic);
-
-    return {
-      seriousStyle,
-      smileStyle,
-      enterImage,
-      leaveImage,
-      seriousPic,
-      serious,
-      currentPicture,
-      smilePic,
-    };
-  },
+  components: {Splash, About, Portfolio, Resume, Contact},
+  name: "Home"
 };
 </script>
 
 <style lang="scss">
-.hexagon {
-  width: 100px;
-  height: 57.735px;
-  background: var(--primary);
-  position: relative;
-}
-.hexagon::before {
-  content: "";
-  position: absolute;
-  top: -28.8675px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 28.8675px solid var(--primary);
-}
-.hexagon::after {
-  content: "";
-  position: absolute;
-  bottom: -28.8675px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 28.8675px solid var(--primary);
-}
 
-#about {
-  position: relative;
-  margin: 50px;
-}
 #boids-display {
   position: absolute;
   top: 0;
@@ -274,33 +157,12 @@ $transition: 0.3s ease-out all;
   text-align: center;
 }
 
-#about {
-  display: grid;
-  align-items: center;
-  text-align: center;
-
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  justify-content: center;
-  max-width: 1200px;
-  padding: 100px;
-  margin: auto;
-}
-
 #intro {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-.transparent {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 100;
-}
-
 #intro h1 {
   font-size: 3rem;
 }
