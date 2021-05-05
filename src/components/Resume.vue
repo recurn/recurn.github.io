@@ -1,0 +1,18 @@
+<template>
+  <div id="resume">
+        <h1>Resume</h1>
+        <h2>Education</h2>
+        <h2>Work Experience</h2>
+        <h2>Skills</h2>
+      </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>

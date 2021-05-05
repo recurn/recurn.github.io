@@ -12,6 +12,7 @@ class Boid {
     this.maxSpeed = 3;
     let colorIndex = random(1);
     let alpha = 15;
+    this.frame = 1;
     if (colorIndex > 0.5) {
       this.color = color(0, 179, 255, alpha);
     } else if (colorIndex < 0.25) {

@@ -1,7 +1,5 @@
 let qtree;
 
-let particles = [];
-
 const flock = [];
 
 let alignmentSlider, cohesionSlider, separationSlider;
@@ -65,7 +63,6 @@ function draw() {
     for (let f of flock) {
       let point = new Point(f.position.x, f.position.y, f);
       qtree.insert(point);
-
       f.update();
       f.show();
       f.mouseInfluence(mouseVector);
