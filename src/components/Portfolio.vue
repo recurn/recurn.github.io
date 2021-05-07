@@ -1,14 +1,14 @@
 <template>
    <div id="portfolio">
         <h1>Portfolio</h1>
-        <div class="hexagon">
-          <p>Text</p>
-        </div>
+        
       </div>
 </template>
 
 <script>
+import Accordion from "@/components/Accordion.vue"
 export default {
+  components: {Accordion}
 
 }
 </script>

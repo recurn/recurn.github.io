@@ -26,59 +26,94 @@
   </div>
 
   <div id="interests">
-    <article class="message" :class="accordionClasses">
-      <div class="message-header" @click="toggleAccordion">
-        <h2>Interests</h2>
+    <Accordion :header="'Interests'">
+      <div id="interests-content">
+        <div><h3>Music</h3></div>
+        <div><h3>D&D</h3></div>
       </div>
-      <div class="message-body">
-        <div class="message-content">
-          These are some interests
-        </div>
-      </div>
-    </article>
+    </Accordion>
   </div>
 </template>
 
 <script>
-import { computed, ref } from "vue";
+import { ref } from "vue";
+import Accordion from "@/components/Accordion.vue";
 
 export default {
+  components: { Accordion },
   setup() {
-    const isOpen = ref(false);
-
-    const toggleAccordion = () => {
-      isOpen.value = !isOpen.value;
-    };
-
     const seriousPic = require("../assets/SeriousPhone.png");
     const smilePic = require("../assets/SmilePhone-Green.png");
 
     const currentPicture = ref(seriousPic);
 
-    const accordionClasses = computed(() => {
-      return {
-        "is-closed": !isOpen.value,
-        "is-primary": !isOpen.value,
-        "is-dark": !isOpen.value,
-      };
-    });
+    const open = ref(false);
 
     return {
       seriousPic,
       currentPicture,
       smilePic,
-      isOpen,
-      toggleAccordion,
-      accordionClasses,
+      open,
     };
   },
 };
 </script>
   
 <style>
+.accordion-enter-active,
+.accordion-leave-active {
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.accordion-enter-from,
+.accordion-leave-to {
+  opacity: 0;
+}
+
 #about {
   position: relative;
   margin: 50px auto;
+}
+#interests {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  background: var(--dark-blue);
+}
+
+#interests .accordion .message-body {
+  color: var(--ivory);
+}
+
+#interests .accordion .message-header {
+  color: var(--ivory);
+  border-color: var(--ivory);
+  margin: 10px auto;
+}
+
+#interests .accordion .message-header:hover {
+  color: var(--dark-blue);
+  background: var(--ivory);
+}
+
+#interests h2 {
+  margin: 5px 10px;
+}
+
+#interests-content {
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  justify-content: center;
+  max-width: 1200px;
+  padding: 0px 1em;
 }
 
 #about {
@@ -90,34 +125,9 @@ export default {
   justify-content: center;
   max-width: 1200px;
   padding: 0px 1em;
-
 }
 
 #about div {
-    padding: 10%;
-}
-
-#interests {
-  margin: 50px auto;
-}
-
-.message {
-  max-width: 500px;
-  margin: auto;
-}
-.message-header {
-  cursor: pointer;
-}
-.message-body {
-  padding: 0;
-  max-height: 10em;
-  overflow: hidden;
-  transition: 0.3s ease all;
-}
-.is-closed .message-body {
-  max-height: 0;
-}
-.message-content {
-  padding: 20px;
+  padding: 10%;
 }
 </style>
