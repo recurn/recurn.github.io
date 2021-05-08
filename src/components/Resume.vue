@@ -1,7 +1,7 @@
 <template>
   <div id="resume">
     <h1>Resume</h1>
-    <Accordion :header="'Skills'">
+    <Accordion :header="'Skills'" startOpen="true">
       <h3>Languages</h3>
       <div>
         <div class="resume-rating">
@@ -88,6 +88,23 @@
       </ul>
     </Accordion>
     <Accordion :header="'Work Experience'">
+      <h3>CODEMAKER HEAD, INSTRUCTOR</h3>
+      <p>GEERING UP | MAY 2021 - PRESENT, MAY - AUG 2019, JUN - AUG 2018</p>
+      <ul>
+        <li>
+          Demonstrated creativity and initiative through development of a
+          tracking and security system for over 200 laptops and other high-value
+          technology
+        </li>
+        <li>
+          Worked effectively independently and showed reliability by juggling
+          multiple responsibilities with little oversight
+        </li>
+        <li>
+          Developed curriculum for 2 separate UBC summer engineering day camps
+          for 7-12 year olds
+        </li>
+      </ul>
       <h3>TEACHING ASSISTANT</h3>
       <p>UBC COGNITIVE SYSTEMS | SEP 2018 - APR 2021</p>
       <ul>
@@ -104,8 +121,13 @@
       </ul>
       <p>UBC COMPUTER SCIENCE | SEP 2017 - MAY 2018, JUL 2015 - APR 2016</p>
       <ul>
-        <li>Taught labs, marked assignments/exams and held office hours for two 100 level cpsc courses</li>
-        <li>Directly interacted with over 500 students across 6 terms of teaching</li>
+        <li>
+          Taught labs, marked assignments/exams and held office hours for two
+          100 level cpsc courses
+        </li>
+        <li>
+          Directly interacted with over 500 students across 6 terms of teaching
+        </li>
         <li>Received an average of 4.5 (out of 5) on teaching evaluations</li>
       </ul>
 
@@ -123,25 +145,8 @@
         </li>
         <li>
           Showed passion and dedication by going above and beyond the
-          requirements through tremendous effort and creativity during a difficult time period
-        </li>
-      </ul>
-
-      <h3>CODEMAKER HEAD, INSTRUCTOR</h3>
-      <p>GEERING UP | MAY 2021 - PRESENT, MAY - AUG 2019, JUN - AUG 2018</p>
-      <ul>
-        <li>
-          Demonstrated creativity and initiative through development of a
-          tracking and security system for over 200 laptops and other high-value
-          technology
-        </li>
-        <li>
-          Worked effectively independently and showed reliability by juggling
-          multiple responsibilities with little oversight
-        </li>
-        <li>
-          Developed curriculum for 2 separate UBC summer engineering day camps
-          for 7-12 year olds
+          requirements through tremendous effort and creativity during a
+          difficult time period
         </li>
       </ul>
     </Accordion>
@@ -206,7 +211,7 @@ export default {
 
     const starStyle = ref({
       fullStarColor: "#DA4167",
-      emptyStarColor: "#737373",
+      emptyStarColor: "#b1b1b1",
       starWidth: 30,
       starHeight: 30,
     });

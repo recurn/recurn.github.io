@@ -28,11 +28,12 @@
   </div>
 
   <div id="interests">
-      <h2>Interests</h2>
+      <h1>Interests</h1>
       <div id="interests-content">
         <div><h3>Music</h3><img class="interest-icon" src="../assets/ukulele.png" alt=""></div>
         <div><h3>D&D</h3><img class="interest-icon" src="../assets/dndDice.png" alt=""></div>
         <div><h3>Meditation</h3><img class="interest-icon" src="../assets/meditation.png" alt=""></div>
+        <div><h3>Quantified Self</h3><img class="interest-icon" src="../assets/growth.png" alt=""></div>
       </div>
   </div>
 </template>
@@ -111,7 +112,7 @@ export default {
   align-items: center;
   padding: 20px;
   margin: 0 auto;
-  background: var(--dark-blue);
+  background: var(--primary);
 }
 
 #interests h2 {

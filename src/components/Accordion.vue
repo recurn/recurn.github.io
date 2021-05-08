@@ -25,9 +25,9 @@
 <script>
 import { computed, ref } from "vue";
 export default {
-  props: ["header", "message"],
-  setup() {
-    const isOpen = ref(false);
+  props: ["header", "message", "startOpen"],
+  setup(props) {
+    const isOpen = ref(props.startOpen);
 
     const toggleAccordion = () => {
       isOpen.value = !isOpen.value;

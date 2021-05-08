@@ -14,11 +14,11 @@ canvas {
   /* --primary: #0ca3e9; */
   --primary: #2A324B;
   --accent: #2CDA9D;
-  --ruby: #D81E5B;
+  --ruby: #DA4167;
   --dark-purple: #22031F;
   --violet: #573280;
   --ivory: #FFFFEA;
-  --dark-blue: #2A324B;
+  --dark-blue: #2a324b83;
 }
 
 #boids-display {

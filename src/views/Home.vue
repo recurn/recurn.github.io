@@ -3,12 +3,10 @@
     <div id="boids-display"></div>
     <div class="content">
       <Splash />
+      <Portfolio />
       <About />
       <div class="divider" />
-      <Portfolio />
-      <div class="divider"></div>
       <Resume />
-      <div class="divider"></div>
       <Contact />
     </div>
   </div>
@@ -16,20 +14,19 @@
 
 <script>
 // @ is an alias to /src
-import Splash from "@/components/Splash.vue"
-import About from "@/components/About.vue"
-import Portfolio from "@/components/Portfolio.vue"
-import Resume from "@/components/Resume.vue"
-import Contact from "@/components/Contact.vue"
+import Splash from "@/components/Splash.vue";
+import About from "@/components/About.vue";
+import Portfolio from "@/components/Portfolio.vue";
+import Resume from "@/components/Resume.vue";
+import Contact from "@/components/Contact.vue";
 
 export default {
-  components: {Splash, About, Portfolio, Resume, Contact},
-  name: "Home"
+  components: { Splash, About, Portfolio, Resume, Contact },
+  name: "Home",
 };
 </script>
 
 <style lang="scss">
-
 #boids-display {
   position: absolute;
   top: 0;
@@ -39,7 +36,6 @@ export default {
   height: 100%;
   filter: blur(2px);
 }
-
 
 .content {
   min-width: 350px;
@@ -64,10 +60,6 @@ export default {
 }
 #intro h1 {
   font-size: 3rem;
-}
-
-#intro p {
-  font-size: 1.5rem;
 }
 #mid-bar {
   height: 50px;

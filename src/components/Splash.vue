@@ -1,32 +1,29 @@
 <template>
   <div id="splash">
-        <div id="intro">
-          <h1>
-            Hi, I'm <br />
-            Reid Patterson
-          </h1>
-          <p>I make interactive web experiences</p>
-          <a href="/#portfolio"
-            ><p>
-              <span class="bg"></span><span class="base"></span
-              ><span class="text">My Work</span>
-            </p></a
-          >
-          <a href="/#portfolio"
-            ><p>
-              <span class="bg"></span><span class="base"></span
-              ><span class="text">Contact</span>
-            </p></a
-          >
-        </div>
-      </div>
-      <div class="divider"></div>
+    <div id="intro">
+      <h1>
+        Hi, I'm <br />
+        <span id="name-header">Reid Patterson</span>
+      </h1>
+      <p>I make interactive web experiences</p>
+      <a href="/#portfolio" class="slide-button"
+        ><p>
+          <span class="bg"></span><span class="base"></span
+          ><span class="text">My Work</span>
+        </p></a
+      >
+      <a href="/#contact" class="slide-button"
+        ><p>
+          <span class="bg"></span><span class="base"></span
+          ><span class="text">Contact</span>
+        </p></a
+      >
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss">
@@ -36,7 +33,7 @@ $pink: var(--primary);
 $height: 54px;
 $transition: 0.3s ease-out all;
 
-#intro a {
+.slide-button {
   width: 100%;
   max-width: 240px;
   height: $height;
@@ -72,7 +69,7 @@ $transition: 0.3s ease-out all;
     box-sizing: border-box;
     z-index: 1;
     left: 0;
-    font-size: 18px;
+    font-size: 1.2rem;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -112,6 +109,7 @@ $transition: 0.3s ease-out all;
       position: absolute;
       left: 0;
       top: 0;
+
       &:after {
         content: "";
         width: 4px;
@@ -126,10 +124,16 @@ $transition: 0.3s ease-out all;
     }
   }
   &:hover {
-    color: $white;
     & span.bg {
       width: 110%;
     }
+    & span.text {
+      color: var(--ruby);
+    }
   }
+}
+
+#name-header {
+  color: var(--ruby);
 }
 </style>
