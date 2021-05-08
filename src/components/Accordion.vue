@@ -153,9 +153,6 @@ export default {
   // overflow: hidden;
   // transition: 0.5s ease all;
 }
-.is-closed .message-body {
-  //max-height: 0;
-}
 .message-content {
   padding: 20px;
 }
