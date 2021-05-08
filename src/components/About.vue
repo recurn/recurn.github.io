@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <div>
+    <div id="about-desc">
       <h1>About</h1>
       <p>
         A recent grad from the University of British Columbia, where I studied
@@ -17,21 +17,23 @@
     <div id="action">
       <img
         class="portrait"
-        :src="currentPicture"
-        @mouseenter="currentPicture = smilePic"
-        @mouseleave="currentPicture = seriousPic"
+        id="portrait"
+        :src="seriousPic"
+        @mouseenter="swap"
+        :style="{'z-index': seriousZ}"
         alt=""
       />
+      <img class="portrait" :style="{zIndex: smileZ}" :src="smilePic" @mouseleave="swap" alt="">
     </div>
   </div>
 
   <div id="interests">
-    <Accordion :header="'Interests'">
+      <h2>Interests</h2>
       <div id="interests-content">
-        <div><h3>Music</h3></div>
-        <div><h3>D&D</h3></div>
+        <div><h3>Music</h3><img class="interest-icon" src="../assets/ukulele.png" alt=""></div>
+        <div><h3>D&D</h3><img class="interest-icon" src="../assets/dndDice.png" alt=""></div>
+        <div><h3>Meditation</h3><img class="interest-icon" src="../assets/meditation.png" alt=""></div>
       </div>
-    </Accordion>
   </div>
 </template>
 
@@ -47,58 +49,69 @@ export default {
 
     const currentPicture = ref(seriousPic);
 
+    const seriousZ = ref(1);
+
+    const smileZ = ref(-1);
+
+    const swap = () => {
+      seriousZ.value *= -1;
+      smileZ.value *= -1; 
+    }
+
     const open = ref(false);
 
     return {
       seriousPic,
       currentPicture,
       smilePic,
+      seriousZ,
+      smileZ,
       open,
+      swap
     };
   },
 };
 </script>
   
-<style>
-.accordion-enter-active,
-.accordion-leave-active {
-  transition: opacity 0.5s ease;
-  overflow: hidden;
+<style lang="scss">
+.interest-icon{
+  filter: invert(9%) sepia(14%) saturate(343%) hue-rotate(358deg) brightness(113%) contrast(103%);
+  max-width: 150px;
 }
 
-.accordion-enter-from,
-.accordion-leave-to {
-  opacity: 0;
+.portrait {
+  height: 80%;
+  border-radius: 35%;
+  position: absolute;
+  z-index: 1;
 }
-
-#about {
+#action {
+  height: 90%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  padding: 0px;
+}
+#about-desc {
+  margin: 0px;
+}
+#about {
   margin: 50px auto;
 }
+#about p{
+  font-size: 20px;
+}
 #interests {
-  display: flex;
+  color: var(--ivory);
   margin: auto;
   justify-content: center;
   align-content: center;
   align-items: center;
-  padding: 0;
+  padding: 20px;
   margin: 0 auto;
   background: var(--dark-blue);
-}
-
-#interests .accordion .message-body {
-  color: var(--ivory);
-}
-
-#interests .accordion .message-header {
-  color: var(--ivory);
-  border-color: var(--ivory);
-  margin: 10px auto;
-}
-
-#interests .accordion .message-header:hover {
-  color: var(--dark-blue);
-  background: var(--ivory);
 }
 
 #interests h2 {
@@ -110,8 +123,9 @@ export default {
   align-items: center;
   text-align: center;
 
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
+  margin: auto;
   max-width: 1200px;
   padding: 0px 1em;
 }
