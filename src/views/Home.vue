@@ -76,20 +76,6 @@ export default {
   background: #57cbab;
 }
 
-.portraits {
-  margin-top: 50px;
-  width: 500px;
-  position: relative;
-}
-.portrait {
-  width: 100%;
-  max-width: 800px;
-  min-width: 200px;
-  top: 0;
-  left: 0;
-  border-radius: 35%;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.1s;
