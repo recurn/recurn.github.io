@@ -162,9 +162,9 @@ class Boid {
     noStroke();
     translate(this.position.x, this.position.y);
     rotate(theta);
-    let tip = createVector(0, -30);
-    let left = createVector(-10, 0);
-    let right = createVector(10, 0);
+    let tip = createVector(0, -40);
+    let left = createVector(-15, 0);
+    let right = createVector(15, 0);
 
     triangle(tip.x, tip.y, left.x, left.y, right.x, right.y);
     pop();

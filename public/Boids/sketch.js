@@ -33,12 +33,12 @@ function draw() {
     lastMY = mouseY;
     lastMouseVector = createVector();
 
-    for (let i = 0; i < 400; i++) {
+    for (let i = 0; i < 200; i++) {
       flock.push(new Boid());
     }
     created = true;
   } else if (created){
-    if (flock.length < 500 && random(1) < 0.08) {
+    if (flock.length < 300 && random(1) < 0.08) {
       flock.push(new Boid());
     }
 
