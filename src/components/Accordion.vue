@@ -136,7 +136,7 @@ export default {
   cursor: pointer;
   border: 3px solid var(--primary);
   padding: 5px 10px;
-  max-width: 200px;
+  // max-width: 200px;
   margin: auto;
   color: var(--primary);
 }

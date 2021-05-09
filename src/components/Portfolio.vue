@@ -9,8 +9,11 @@
           <p>A gamified habit tracker</p>
           <button class="slide-button">
             <p>
-              <span class="bg"></span><span class="base"></span
-              ><span class="text">Learn More</span>
+              <router-link to="/evolvingcyborgs">
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">Learn More</span>
+              </router-link>
             </p>
           </button>
           <div class="logos">
@@ -37,8 +40,11 @@
           <p>A Machine Learning Tournament in Unity</p>
           <button class="slide-button">
             <p>
-              <span class="bg"></span><span class="base"></span
-              ><span class="text">Learn More</span>
+              <router-link to="/evolvingcyborgs">
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">Learn More</span>
+              </router-link>
             </p>
           </button>
           <div class="logos">
@@ -60,6 +66,7 @@
 
 <script>
 import Accordion from "@/components/Accordion.vue";
+
 export default {
   components: { Accordion },
 };
@@ -138,7 +145,7 @@ button {
   z-index: 4;
 }
 #portfolio p span.bg {
-  background: rgb(68, 94, 143)
+  background: rgb(68, 94, 143);
 }
 
 #evolving-cyborgs {

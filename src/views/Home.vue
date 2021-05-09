@@ -39,6 +39,7 @@ export default {
 
 .content {
   min-width: 350px;
+  // margin-top: 50px;
 }
 
 .divider {
