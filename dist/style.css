@@ -1,0 +1,33 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+canvas {
+  display: block;
+}
+:root{
+  /* --primary: #0ca3e9; */
+  --primary: #2A324B;
+  --accent: #2CDA9D;
+  --ruby: #DA4167;
+  --dark-purple: #22031F;
+  --violet: #573280;
+  --ivory: #FFFFEA;
+  --dark-blue: #2a324b83;
+}
+
+#boids-display {
+  position: absolute;
+  top: 0;
+  z-index: -100;
+  width: 100%;
+  margin: 0px;
+  padding-left: 0px;
+  height: 800px;
+  filter: blur(3px);
+}
