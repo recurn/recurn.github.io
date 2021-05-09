@@ -40,7 +40,7 @@
           <p>A Machine Learning Tournament in Unity</p>
           <button class="slide-button">
             <p>
-              <router-link to="/evolvingcyborgs">
+              <router-link to="/mlagentstournament">
                 <span class="bg"></span>
                 <span class="base"></span>
                 <span class="text">Learn More</span>
