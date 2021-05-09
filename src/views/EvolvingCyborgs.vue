@@ -3,7 +3,7 @@
     <div class="title">
       <h1>Evolving Cyborgs</h1>
       <p>A better gamified habit tracker</p>
-      <a href="https://evolving-cyborgs.web.app" class="slide-button">
+      <a href="https://evolving-cyborgs.web.app" target="blank" class="slide-button">
         <p>
           <span class="bg"></span><span class="base"></span
           ><span class="text">Demo</span>
@@ -11,6 +11,7 @@
       </a>
       <a
         href="https://github.com/recurn/evolving-cyborgs/"
+        target="blank"
         class="slide-button"
       >
         <p>
