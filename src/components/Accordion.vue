@@ -71,11 +71,11 @@ export default {
     };
 
     const afterEnter = (element) => {
-      element.style.height = 'auto';
-    }
+      element.style.height = "auto";
+    };
     const leave = (element) => {
       const height = getComputedStyle(element).height;
-      
+
       element.style.height = height;
 
       // Force repaint to make sure the
@@ -85,7 +85,7 @@ export default {
       requestAnimationFrame(() => {
         element.style.height = 0;
       });
-    }
+    };
 
     return {
       isOpen,
@@ -93,7 +93,7 @@ export default {
       accordionClasses,
       enter,
       afterEnter,
-      leave
+      leave,
     };
   },
 };
@@ -109,7 +109,6 @@ export default {
 </style>
 
 <style lang="scss">
-
 .expand-enter-active,
 .expand-leave-active {
   transition: height 0.5s ease-in-out;
@@ -124,6 +123,7 @@ export default {
   margin: 20px;
   margin: 20px auto;
   width: 80%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .message {
@@ -134,11 +134,11 @@ export default {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  border: 3px solid var(--primary);
   padding: 5px 10px;
   // max-width: 200px;
   margin: auto;
   color: var(--primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .message-header h2 {
   margin-right: 10px;
@@ -150,6 +150,9 @@ export default {
 }
 .message-body {
   padding: 0;
+
+  border-top: none;
+  text-align: left;
   // overflow: hidden;
   // transition: 0.5s ease all;
 }
