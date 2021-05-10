@@ -3,12 +3,12 @@
     <div id="nav-content">
       <h2><a href="/#splash">Reid Patterson</a></h2>
       <div id="nav-links">
-        <a href="/#about">About</a>
         <a href="/#portfolio">Portfolio</a>
+        <a href="/#about">About</a>
+
         <a href="/#resume">Resume</a>
         <a href="/#contact">Contact</a>
-        
-        </div>
+      </div>
 
       <!-- <router-link to="/about">About</router-link> -->
     </div>
@@ -29,12 +29,12 @@
 #nav {
   display: flex;
   flex-direction: row;
+
   align-items: center;
   text-align: center;
   margin: 0px;
   top: 0;
   padding: 0px;
-  height: 40px;
   width: 100%;
   background: #ffffffb7;
   position: fixed;
@@ -63,6 +63,11 @@
 }
 #nav a:hover {
   color: var(--primary);
+}
+
+#nav-links {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 a:active {
@@ -178,5 +183,4 @@ $transition: 0.3s ease-out all;
     }
   }
 }
-
 </style>
