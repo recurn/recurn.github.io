@@ -1,7 +1,8 @@
 <template>
   <div id="contact">
     <h1>Contact</h1>
-    <form class="contact-form" @submit.prevent="sendEmail">
+    <p>Send me an email and I'll get back to you as soon as I can</p>
+    <form v-if="!submit" class="contact-form" @submit.prevent="sendEmail">
       <label>Name</label>
       <input
         class="contact-input"
@@ -24,6 +25,9 @@
       ></textarea>
       <input class="send-button" type="submit" value="Send Email" />
     </form>
+    <div class="contact-form" v-else-if="submit">
+      <h2>Thanks for contacting me!</h2>
+    </div>
   </div>
 </template>
 
@@ -37,7 +41,8 @@ export default {
     return {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      submit: false
     }
   },
   methods: {
@@ -50,6 +55,7 @@ export default {
           email: this.email,
           message: this.message
         })
+        this.submit = true;
 
       } catch(error) {
           console.log({error})
@@ -69,7 +75,7 @@ export default {
   padding: 20px;
 }
 
-#contact h1 {
+#contact h1, #contact p {
   color: var(--ivory);
 }
 
@@ -88,19 +94,21 @@ export default {
 
 .contact-input {
   height: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 4px;
+  margin-bottom: 20px;
   border: none;
-  box-shadow: 2px 2px 3px 3px #0000005e;
+  box-shadow: 2px 2px 2px 2px #0000005e;
+  padding: 5px;
 }
 
 .contact-input:focus {
   border: none;
+  outline: none;
 }
 
 .contact-form textarea {
-  min-height: 100px;
-  font-size: 1.5rem;
+  min-height: 150px;
 }
 
 .contact-form .send-button {
