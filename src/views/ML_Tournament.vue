@@ -19,10 +19,10 @@
             ><span class="text">Code</span>
           </p>
         </a>
-        <h2>My Role:</h2>
+        <h2>My Role</h2>
         <p>
-          Lead developer on team of 2 students, created in collaboration with
-          the professor of the course
+          Lead developer on team of 2 teaching assistant students, done in
+          collaboration with the professor of the course
         </p>
       </div>
       <div class="summary">
@@ -32,6 +32,25 @@
           which would autonomously compete in a 1v1 tournament based on a
           capture the flag game
         </p>
+      </div>
+      <div class="problem">
+        <h2>The Problem</h2>
+        <p>
+          With the transition to an online-only teaching structure due to
+          covid-19, the UBC course Cognitive Systems 300 could no longer use the
+          existing in-person labs which involved the creation of physical robots
+          using Arduinos.
+        </p>
+        <p>
+          Myself, along with another student, were hired to design a set of new
+          labs using Unity, a game design software. 10 brand-new labs would need
+          to be created.
+        </p>
+      </div>
+      <div class="solution">
+        <div class="shadow-box">
+          <h2>The Solution</h2>
+        </div>
       </div>
     </div>
   </div>
@@ -55,5 +74,9 @@
     margin-top: 150px;
     padding: 50px;
     max-width: 1000px;
+  }
+
+  #ml-tournament-portfolio {
+    background: #fefefed0;
   }
 </style>
