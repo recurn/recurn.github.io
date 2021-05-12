@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import EvolvingCyborgs from "../views/EvolvingCyborgs.vue"
+import ML_Tournament from "../views/ML_Tournament.vue"
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path:"/evolvingcyborgs",
     name: "Evolving Cyborgs",
     component: EvolvingCyborgs
+  },
+  {
+    path:"/mltournament",
+    name: "ML Tournament",
+    component: ML_Tournament,
   }
   
 ];
