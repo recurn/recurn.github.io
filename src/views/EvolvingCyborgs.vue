@@ -24,7 +24,7 @@
             ><span class="text">Code</span>
           </p>
         </a>
-        <h2>My Role:</h2>
+        <h2>My Role</h2>
         <p>Owner, designer and sole creator of a personal project</p>
       </div>
       <br>
@@ -38,7 +38,7 @@
         </p>
       </div>
       <div class="problem">
-        <h2>The problem</h2>
+        <h2>The Problem</h2>
         <p>
           This project was originally bourne out of frustrations with similar
           existing apps. Here's what I felt was wrong with other attempts:
