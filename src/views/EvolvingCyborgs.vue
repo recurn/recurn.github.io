@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio-page" id="evolving-cyborgs-bg">
     <div id="evolving-cyborgs-portfolio" class="portfolio-content-page">
-      <div class="title">
+      <div class="title shadow-box" id="evolving-cyborgs-title">
         <h1>Evolving Cyborgs</h1>
         <p>A better gamified habit tracker</p>
         <a
@@ -24,11 +24,32 @@
             ><span class="text">Code</span>
           </p>
         </a>
+        <div class="logos">
+          <span class="logo"
+            ><img src="../assets/logo.png" alt="" height="50" />Vue</span
+          >
+          <span class="logo"
+            ><img
+              src="../assets/Firebase_Logo_Logomark.png"
+              alt=""
+            />FireBase</span
+          >
+          <span class="logo"
+            ><img src="../assets/js_html_css.png" alt="" />Web</span
+          >
+          <span class="logo"
+            ><img
+              src="../assets/_presskit_primevue-logo.png"
+              alt=""
+            />PrimeVue</span
+          >
+          <span class="logo"><img src="../assets/PWA.png" alt="" />PWA</span>
+        </div>
+      </div>
+
+      <div class="summary shadow-box">
         <h2>My Role</h2>
         <p>Owner, designer and sole creator of a personal project</p>
-      </div>
-      <br>
-      <div class="summary">
         <h3>What is a gamified habit tracker?</h3>
         <p>
           Gamified habit trackers are a genre of app in which elements from
@@ -37,7 +58,7 @@
           complete real world tasks.
         </p>
       </div>
-      <div class="problem">
+      <div class="problem shadow-box">
         <h2>The Problem</h2>
         <p>
           This project was originally bourne out of frustrations with similar
@@ -100,7 +121,7 @@
           somewhere else is a must for me.
         </Accordion>
       </div>
-      <div class="solution">
+      <div class="solution shadow-box">
         <h2>The Solution</h2>
         <div class="shadow-box">
           <h3>Version 1 - Spring 2020</h3>
@@ -253,6 +274,12 @@
             <span class="logo"
               ><img src="../assets/js_html_css.png" alt="" />Web</span
             >
+            <span class="logo"
+              ><img
+                src="../assets/_presskit_primevue-logo.png"
+                alt=""
+              />PrimeVue</span
+            >
             <span class="logo"><img src="../assets/PWA.png" alt="" />PWA</span>
           </div>
           <p>
@@ -316,25 +343,25 @@
             become an expensive mess if not properly managed
           </p>
         </div>
-        <div class="shadow-box">
-          <h3>Future Directions/Road Map</h3>
-          <h4>In Progress</h4>
-          <p>
-            Add in stats (like strength, dexterity, etc) which can be increased
-            through gaining xp on a related action
-          </p>
-          <h4>Planned</h4>
-          <p>
-            Create activites tab - actions which can be performed multiple times
-            per day
-          </p>
-          <p>Expanded stats and details pages for all actions</p>
-          <h4>Considering</h4>
-          <p>Switch over to Graph QL instead of a NoSQL like Firebase</p>
-          <p>Make an API so it can integrate with other services</p>
-          <p>Add custom data types for tracking</p>
-          <p>Timeline view of all activites</p>
-        </div>
+      </div>
+      <div class="shadow-box">
+        <h2>Future Directions/Road Map</h2>
+        <h4>In Progress</h4>
+        <p>
+          Add in stats (like strength, dexterity, etc) which can be increased
+          through gaining xp on a related action
+        </p>
+        <h4>Planned</h4>
+        <p>
+          Create activites tab - actions which can be performed multiple times
+          per day
+        </p>
+        <p>Expanded stats and details pages for all actions</p>
+        <h4>Considering</h4>
+        <p>Switch over to Graph QL instead of a NoSQL like Firebase</p>
+        <p>Make an API so it can integrate with other services</p>
+        <p>Add custom data types for tracking</p>
+        <p>Timeline view of all activites</p>
       </div>
     </div>
   </div>
@@ -379,6 +406,8 @@
 </script>
 
 <style>
+  #evolving-cyborgs-title {
+  }
   .solution .logos {
     justify-content: center;
     margin: 20px auto;
@@ -405,7 +434,7 @@
   .shadow-box {
     padding: 20px;
     background: #fefefe;
-    margin-bottom: 30px;
+    margin: 30px auto;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
   }
 
@@ -438,7 +467,6 @@
   }
 
   .title {
-    max-width: 1000px;
     margin: auto;
   }
 

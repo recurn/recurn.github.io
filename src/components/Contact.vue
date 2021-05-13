@@ -10,7 +10,7 @@
         type="text"
         name="from_name"
       />
-      <label>Email</label>
+      <label>Your Email</label>
       <input
         class="contact-input"
         v-model="email"
@@ -126,5 +126,8 @@ export default {
 .send-button:hover {
   background: var(--ruby);
   color: white;
+}
+.send-button:active {
+  box-shadow: none;
 }
 </style>

@@ -30,6 +30,9 @@
             <span class="logo"
               ><img src="../assets/js_html_css.png" alt="" />Web</span
             >
+            <span class="logo"
+              ><img src="../assets/_presskit_primevue-logo.png" alt="" />PrimeVue</span
+            >
             <span class="logo"><img src="../assets/PWA.png" alt="" />PWA</span>
           </div>
         </div>
@@ -41,7 +44,7 @@
           <p>A Machine Learning Tournament in Unity</p>
           <button class="slide-button">
             <p>
-              <router-link to="/">
+              <router-link to="/mltournament" @click="scrollToTop">
                 <span class="bg"></span>
                 <span class="base"></span>
                 <span class="text">Learn More</span>
@@ -106,7 +109,10 @@
     }
   }
   .logos {
+    min-width: 300px;
+    justify-content: center;
     display: flex;
+    flex-wrap: wrap;
   }
 
   #portfolio {
