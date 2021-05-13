@@ -49,7 +49,11 @@
           Each agent had a short range laser which would stun opponents and
           cause them to drop any targets they were carrying.
         </p>
-        <img class="portfolio-image" src="../assets/ML_Agents_scene.png" alt="" />
+        <img
+          class="portfolio-image"
+          src="../assets/ML_Agents_scene.png"
+          alt=""
+        />
       </div>
       <div class="problem shadow-box">
         <h2>The Problem</h2>
@@ -117,14 +121,35 @@
             complex behaviours off of our simple ones.
           </p>
           <p>
-            Due to time constraints and immovable deadlines (can't teach a lab with no content!), there wasn't a lot of room for prototyping or testing this one - we
-            were thrown to the wolves and the students were our ginuea pig
-            testers.
+            Due to time constraints and immovable deadlines (can't teach a lab
+            with no content!), there wasn't a lot of room for prototyping or
+            testing this one - we were thrown to the wolves and the students
+            were our ginuea pig testers.
           </p>
           <h3>Final Product</h3>
+          <p>
+            This tournament was run during the final lecture for Cogs 300 in
+            both the fall (Sep-Dec) and winter (Jan - Apr) terms. It was a
+            resounding success both times, with the students enjoying themselves
+            and learning lots.
+          </p>
+          <p>
+            Unknown to the students, I also developed a TA bot to compete in the
+            tournament, using the same limitations and rules the students were
+            subject to. Below is a video showing the TA bot facing off against
+            the tournament winner from the students, commentated by myself.
+          </p>
+          <iframe
+            src="https://www.youtube.com/embed/dUhDrbfb-1U"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="shadow-box">
           <h2>Reflections</h2>
+          <p></p>
         </div>
       </div>
     </div>
@@ -136,9 +161,13 @@
 </script>
 
 <style>
-.portfolio-image {
-  width: 100%;
-}
+  .portfolio-image {
+    max-width: 100%;
+    max-height: 300px;
+  }
+  iframe{
+    max-width: 100%;
+  }
   .outline-link {
     border: 2px solid var(--primary);
     text-decoration: none;
@@ -165,11 +194,12 @@
   }
   .portfolio-content-page {
     max-width: 90%;
+    min-width: 250px;
     margin: auto;
     background: #fefefec0;
     margin-top: 150px;
     padding: 50px;
-    
+
     max-width: 1000px;
   }
 
