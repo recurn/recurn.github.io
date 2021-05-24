@@ -82,6 +82,15 @@
             work put in on each section, with the person in charge doing about
             80% of the work and most of the coding while the other one would
             help with the last 20% and focus more on the student instructions.
+            <!-- Talk about responsibility
+            I was the lead on these part of the project
+            Conciseness????
+            not showcasing knowledge and amount of responsibility?
+            The final project -> labs taught this
+            What is the solution? The 10 labs? The final project
+            had to teach lecture material and teach about the final project
+            "As the lead TA it was my responsibility to take lead on the final project for the course"
+            This was completed 100% online -->
           </p>
           <h3>Unity Machine Learning Agents</h3>
           <p>
@@ -149,6 +158,7 @@
         </div>
         <div class="shadow-box">
           <h2>Reflections</h2>
+          <!-- Thank you so much for not only keeping COGS 300 alive during these challenging times, but thriving and evolving. -->
           <p></p>
         </div>
       </div>
