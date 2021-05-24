@@ -57,14 +57,32 @@
           stats) are used to provide additional motivation to the user to
           complete real world tasks.
         </p>
+        <h4>Habitica</h4>
+        <p>
+          Habitica is a great example of this type of app as it is the most
+          popular app in this genre. In Habitica you have an avatar which has
+          stats such as gold, experience and health, and various actions to take
+          such as daily habits and todo list items. Upon completion of these
+          items the usere is rewarded with gold and experience. But if items are
+          not completed when they are supposed to be, the user will be punished
+          by losing health and gold.
+        </p>
       </div>
       <div class="problem shadow-box">
         <h2>The Problem</h2>
         <p>
-          This project was originally bourne out of frustrations with similar
-          existing apps. Here's what I felt was wrong with other attempts:
+          <!-- I wanted a habit tracker... as I used it.. saw ways to improve
+          3 issues with user experience which I thought can be improved  -->
+          I noticed that parts of the design of Habitica led to frustration and
+          I thought I could improve on these by making my own version. Here are
+          some of the issues I noticed.
         </p>
-        <Accordion header="1. Punishing the User">
+        <Accordion header="1. Timing of feedback">
+          <!--
+            - user reward system???
+            - Bring in psych stuff (positive/negative punishment/reward)
+            - Bring up habitica higher (under "what is gamified habit tracker") -->
+
           <p>
             A user should always have a positive experience when interacting
             with your application. This can be tricky to accomplish with
@@ -73,16 +91,21 @@
             punishment for failure which doesn't cause your user to feel bad
             about using your app.
           </p>
-          <h3>Habitica</h3>
           <p>
-            Habitica is the most popular app within this area and unfornuately
-            provides a form of punishment which does not feel good to use. When
+            Habitica has a unique way of applying punishment to the user. When
             you log on to the app the first thing you are greeted with is a
             modal asking you about habits which were left uncomplete from the
             day before. If you haven't completed them, you take damage to your
             health.
           </p>
-          <p><strong> This is a bad design. </strong></p>
+          <img
+            src="@/assets/evolving_cyborgs/Habitica_Daily_Checkoff.png"
+            alt="Screen showing three uncompleted tasks in Habitica"
+          />
+          <img
+            src="@/assets/evolving_cyborgs/Habitica_Daily_Checkoff_Punishment.png"
+            alt=""
+          />
           <p>
             Because the punishment is only applied the next time you log in the
             punishment can be avoided completely by not logging in to the app.
@@ -101,18 +124,19 @@
             </li>
           </ol>
           <p>
-            Both of these choices are bad and defeat the point of having a habit
-            tracker in the first place. Personally, this is what caused me to
-            stop using the app entirely, as I noticed I would start feeling
-            anxious every time I opened the app and if I hadn't completed all my
-            habits the previous day I wouldn't want to open the app at all.
+            Both of these choices defeat the point of having a habit tracker in
+            the first place. Personally, this is what caused me to stop using
+            the app entirely, as I noticed I would start feeling anxious every
+            time I opened the app and if I hadn't completed all my habits the
+            previous day I wouldn't want to open the app at all.
           </p>
         </Accordion>
         <Accordion header="2. Device Restrictions">
           I don't like being locked in to a single device. I want to be able to
           access the app on both desktop and mobile. This allows me the
           convenience of mobile, while still allowing the option of using a
-          mouse and keyboard.
+          mouse and keyboard. While Habitica itself did not have this problem,
+          every other competitor I found did.
         </Accordion>
         <Accordion header="3. No Custom Tracking & Data Lock In">
           I like tracking lots of things about my life, but I don't like it when
@@ -123,8 +147,7 @@
       </div>
       <div class="solution shadow-box">
         <h2>The Solution</h2>
-        <div class="shadow-box">
-          <h3>Version 1 - Spring 2020</h3>
+        <Accordion header="Version 1 - Spring 2020" @click="showDivs">
           <div class="logos">
             <span class="logo"
               ><img src="../assets/logo.png" alt="" height="50" />Vue 2</span
@@ -258,9 +281,8 @@
               Habitica.
             </p>
           </div>
-        </div>
-        <div class="shadow-box">
-          <h3>Version 2 - Winter/Spring 2021</h3>
+        </Accordion>
+        <Accordion header="Version 2 - Winter/Spring 2021">
           <div class="logos">
             <span class="logo"
               ><img src="../assets/logo.png" alt="" height="50" />Vue 3</span
@@ -342,7 +364,7 @@
             collection/document structure of firebase seems like it can easily
             become an expensive mess if not properly managed
           </p>
-        </div>
+        </Accordion>
       </div>
       <div class="shadow-box">
         <h2>Future Directions/Road Map</h2>
@@ -376,9 +398,9 @@
     setup() {
       const slideIndex = ref(1);
 
-      onMounted(() => {
-        showDivs(slideIndex.value);
-      });
+      // onMounted(() => {
+      //   showDivs(slideIndex.value);
+      // });
 
       const plusDivs = (n) => {
         slideIndex.value += n;
@@ -405,7 +427,7 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   #evolving-cyborgs-title {
   }
   .solution .logos {
@@ -429,6 +451,9 @@
   } */
   #evolving-cyborgs-portfolio .accordion {
     background: #fefefe;
+    & .message-content{
+      text-align: center;
+    }
   }
 
   .shadow-box {
@@ -436,6 +461,10 @@
     background: #fefefe;
     margin: 30px auto;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .problem img {
+    max-width: 80%;
   }
 
   .accordion img,
