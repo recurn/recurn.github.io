@@ -9,7 +9,10 @@
           <p>A gamified habit tracker</p>
           <button class="slide-button">
             <p>
-              <router-link to="/evolvingcyborgs#evolving-cyborgs-portfolio" @click="scrollToTop">
+              <router-link
+                to="/evolvingcyborgs#evolving-cyborgs-portfolio"
+                @click="scrollToTop"
+              >
                 <!-- /evolvingcyborgs -->
                 <span class="bg"></span>
                 <span class="base"></span>
@@ -31,7 +34,10 @@
               ><img src="../assets/js_html_css.png" alt="" />Web</span
             >
             <span class="logo"
-              ><img src="../assets/_presskit_primevue-logo.png" alt="" />PrimeVue</span
+              ><img
+                src="../assets/_presskit_primevue-logo.png"
+                alt=""
+              />PrimeVue</span
             >
             <span class="logo"><img src="../assets/PWA.png" alt="" />PWA</span>
           </div>
@@ -64,6 +70,40 @@
           </div>
         </div>
       </div>
+      <div class="portfolio-grid-container">
+        <div class="portfolio-background" id="workshop-chat"></div>
+        <div class="portfolio-content">
+          <h2>Workshop Chat</h2>
+          <p>A no sign in codebase and chat app</p>
+          <button class="slide-button">
+            <p>
+              <router-link
+                to="/guworkshops"
+                @click="scrollToTop"
+              >
+                <!-- /evolvingcyborgs -->
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">Learn More</span>
+              </router-link>
+            </p>
+          </button>
+          <div class="logos">
+            <span class="logo"
+              ><img src="../assets/logo.png" alt="" height="50" />Vue</span
+            >
+            <span class="logo"
+              ><img
+                src="../assets/Firebase_Logo_Logomark.png"
+                alt=""
+              />FireBase</span
+            >
+            <span class="logo"
+              ><img src="../assets/js_html_css.png" alt="" />Web</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -73,11 +113,11 @@
 
   export default {
     components: { Accordion },
-     methods: { 
-           scrollToTop() {
-                window.scrollTo(0,0);
-           }
-        }
+    methods: {
+      scrollToTop() {
+        window.scrollTo(0, 0);
+      },
+    },
   };
 </script>
 
@@ -167,13 +207,16 @@
   #portfolio-ml-agents {
     background-image: url("../assets/ML_Agents_scene.png");
   }
+  #workshop-chat {
+    background-image: url("../assets/gu_chat/WorkshopChat.jpg")
+  }
 
   #portfolio-container {
     display: grid;
     align-items: center;
     text-align: center;
     overflow: auto;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
     justify-content: center;
     margin: auto;
     max-width: 1200px;
