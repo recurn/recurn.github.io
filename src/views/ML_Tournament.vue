@@ -8,13 +8,13 @@
           year university students in Cognitve Systems 300 at the University of
           British Columbia
         </p>
-        <a href="" target="blank" class="slide-button">
+        <!-- <a href="" target="blank" class="slide-button">
           <p>
             <span class="bg"></span><span class="base"></span
             ><span class="text">Demo</span>
           </p>
-        </a>
-        <a href="" target="blank" class="slide-button">
+        </a> -->
+        <a href="https://github.com/COGS300/lab7to9-robot-tournament" target="blank" class="slide-button">
           <p>
             <span class="bg"></span><span class="base"></span
             ><span class="text">Code</span>
@@ -36,7 +36,9 @@
         <h2>My Role</h2>
         <p>
           Lead developer on team of 2 teaching assistant students, done in
-          collaboration with the professor of the course.
+          collaboration with the professor of the course. This projects was
+          completed 100% asynchronously and online, with minimal oversight from
+          the professor.
         </p>
         <h3>What did the tournament involve?</h3>
         <p>
@@ -68,20 +70,23 @@
           labs using Unity, a game design software. <br />10 completely new labs
           would need to be created.
         </p>
+        <p>
+          In addition to the labs, we also wanted to create a final project for
+          the course where the students could apply the knowledge they had
+          learned in labs and lectures.
+        </p>
       </div>
       <div class="solution">
         <div class="shadow-box">
           <h2>The Solution</h2>
           <p>
-            The other student and I decided to split the responsibility for the
-            labs, with him taking on the first 6 and myself taking the last 4.
-            This split was because we wanted to add in some kind of term project
-            into the course, and use the last 4 labs to teach the technology
-            required to do that. The first 6 labs would be on separate topics
-            relating to lecture material. There was around an 80/20 split for
-            work put in on each section, with the person in charge doing about
-            80% of the work and most of the coding while the other one would
-            help with the last 20% and focus more on the student instructions.
+            As the lead TA for the course it was my responsibility to take the
+            lead on the final project for the course. The other TA on the
+            project would focus on creating the content for the labs. 6 of these
+            10 labs would teach basic Unity concepts and relate closely to
+            content covered in the lectures of the course. The final 4 labs
+            would teach about Unity ML Agents, which would be the foundation for
+            the final project.
             <!-- Talk about responsibility
             I was the lead on these part of the project
             Conciseness????
@@ -125,9 +130,8 @@
             We decided the best way to do this was to provide a framework for
             the students to build off of. So we created a class for them called
             Cogs Agent which included things like basic movement, shooting and
-            object interaction. <br />
-            The students could then extend this class and build their own, more
-            complex behaviours off of our simple ones.
+            object interaction. The students could then extend this class and
+            build their own, more complex behaviours off of our simple ones.
           </p>
           <p>
             Due to time constraints and immovable deadlines (can't teach a lab
@@ -158,8 +162,44 @@
         </div>
         <div class="shadow-box">
           <h2>Reflections</h2>
-          <!-- Thank you so much for not only keeping COGS 300 alive during these challenging times, but thriving and evolving. -->
-          <p></p>
+          <h3>Feedback</h3>
+          <p>
+            The feedback we received on this project was overwhelmingly
+            positive. We had a lot of buy-in from the students, which is notable
+            due to the fact that student engagement was difficult to create
+            during online-only teaching.
+          </p>
+          <p class="quotation">
+            "Thank you so much for not only keeping COGS 300 alive during these
+            challenging times, but thriving and evolving." <br />
+            - Cogs Course Coordinator
+          </p>
+          <h3>
+            Lessons Learned
+          </h3>
+          <p>
+            Pay more attention to dependencies. Some students (especially M1 mac
+            users) had difficulties with the version of ML Agents and couldn't
+            import their trained models. Understandably, this was frustrating
+            for students, though it's effect was slightly mitigated due to them
+            being in groups of 4 for the project.
+          </p>
+          <p>
+            Make the installation process easier. Much of the installation of
+            Unity ML must be done through the command line, which can be
+            intimidating to students who have never used it before. Creating an
+            install script for the students could reduce stress and errors in
+            the install process.
+          </p>
+          <p>
+            Adding more abilities/options to the agents would allow more varied
+            strategy and gameplay. Instead of lasers there could be projectiles,
+            which would add depth to the targeting algorithms. Adding obstacles,
+            or other features to the arena would vary movement strategies.
+            Creating different options for bots such as slower moving but
+            tougher vs faster moving but fragile would allow greater
+            customization and variation in strategies.
+          </p>
         </div>
       </div>
     </div>
@@ -175,8 +215,12 @@
     max-width: 100%;
     max-height: 300px;
   }
-  iframe{
+  iframe {
     max-width: 100%;
+  }
+  .quotation {
+    font-style: italic;
+    font-size: 1.1em;
   }
   .outline-link {
     border: 2px solid var(--primary);
@@ -215,7 +259,7 @@
 
   #ml-tournament-portfolio {
     background: #fefefed0;
-    max-width: 100%;
+    max-width: 80%;
     padding: auto;
   }
 </style>

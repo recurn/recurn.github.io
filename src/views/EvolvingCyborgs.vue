@@ -4,7 +4,7 @@
       <div class="title shadow-box" id="evolving-cyborgs-title">
         <h1>Evolving Cyborgs</h1>
         <p>A better gamified habit tracker</p>
-        <a
+        <!-- <a
           href="https://evolving-cyborgs.web.app"
           target="blank"
           class="slide-button"
@@ -13,7 +13,7 @@
             <span class="bg"></span><span class="base"></span
             ><span class="text">Demo</span>
           </p>
-        </a>
+        </a> -->
         <a
           href="https://github.com/recurn/evolving-cyborgs/"
           target="blank"
@@ -332,7 +332,7 @@
             src="../assets/evolving_cyborgs/evolving-cyborgs-mobile.png"
             alt=""
           />
-          <a
+          <!-- <a
             href="https://evolving-cyborgs.web.app"
             target="blank"
             class="slide-button"
@@ -341,7 +341,7 @@
               <span class="bg"></span><span class="base"></span
               ><span class="text">Live Demo</span>
             </p>
-          </a>
+          </a> -->
           <h4>Features include:</h4>
           <p>A daily habit tracker & stats</p>
           <p>
