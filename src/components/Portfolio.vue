@@ -74,7 +74,7 @@
         <div class="portfolio-background" id="workshop-chat"></div>
         <div class="portfolio-content">
           <h2>Workshop Chat</h2>
-          <p>A no sign in codebase and chat app</p>
+          <p>A no-sign-in codebase and chat app made for Geering Up</p>
           <button class="slide-button">
             <p>
               <router-link
