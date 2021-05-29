@@ -5,6 +5,7 @@
       <Splash />
       <Portfolio />
       <About />
+      <Interests />
       <div class="divider" />
       <Resume />
       <Contact />
@@ -19,9 +20,10 @@ import About from "@/components/About.vue";
 import Portfolio from "@/components/Portfolio.vue";
 import Resume from "@/components/Resume.vue";
 import Contact from "@/components/Contact.vue";
+import Interests from "@/components/Interests.vue"
 
 export default {
-  components: { Splash, About, Portfolio, Resume, Contact },
+  components: { Splash, About, Portfolio, Resume, Contact, Interests },
   name: "Home",
 };
 </script>
