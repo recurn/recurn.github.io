@@ -77,10 +77,7 @@
           <p>A no-sign-in codebase and chat app made for Geering Up</p>
           <button class="slide-button">
             <p>
-              <router-link
-                to="/guworkshops"
-                @click="scrollToTop"
-              >
+              <router-link to="/guworkshops" @click="scrollToTop">
                 <!-- /evolvingcyborgs -->
                 <span class="bg"></span>
                 <span class="base"></span>
@@ -109,160 +106,163 @@
 </template>
 
 <script>
-  import Accordion from "@/components/Accordion.vue";
+import Accordion from "@/components/Accordion.vue";
 
-  export default {
-    components: { Accordion },
-    methods: {
-      scrollToTop() {
-        window.scrollTo(0, 0);
-      },
+export default {
+  components: { Accordion },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
-  };
+  },
+};
 </script>
 
 <style lang="scss">
-  #portfolio {
-    color: var(--ivory);
-    background: var(--primary);
+#portfolio {
+  color: var(--ivory);
+  background: var(--primary);
+  padding: 20px;
+
+  & h1 {
+    margin-top: 0px;
     padding: 20px;
-
-    & h1 {
-      margin-top: 0px;
-      padding: 20px;
-    }
-
-    & h2 {
-      // color: var(--ruby);
-    }
-  }
-  .logo {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 10px;
-
-    & img {
-      height: 100%;
-      width: auto;
-      max-height: 50px;
-      object-fit: scale-down;
-    }
-  }
-  .logos {
-    min-width: 300px;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
   }
 
-  #portfolio {
-    $pink: var(--ruby);
-
-    & .text,
-    .bg .base {
-      color: var(--ruby);
-    }
-
-    & span.base {
-      background: var(--dark-blue);
-    }
+  & h2 {
+    // color: var(--ruby);
   }
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
 
-  #portfolio p {
-    padding: 0px;
-    margin: 0px;
-  }
-
-  button {
-    background: none;
-    font-size: 25px;
-    margin-bottom: 30px;
-    padding: 10px 30px;
-    box-shadow: none;
-    border: none;
-    color: var(--ruby);
-    min-width: 200px;
-    background-clip: content-box;
-
-    & #portfolio span .text {
-      color: var(--ruby);
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  #portfolio p span.base {
-    border: 2px solid var(--ruby);
-    z-index: 4;
-  }
-  #portfolio p span.bg {
-    background: rgb(68, 94, 143);
-  }
-
-  #evolving-cyborgs {
-    background-image: url("../assets/evolving-cyborgs.png");
-  }
-
-  #portfolio-ml-agents {
-    background-image: url("../assets/ML_Agents_scene.png");
-  }
-  #workshop-chat {
-    background-image: url("../assets/gu_chat/WorkshopChat.jpg")
-  }
-
-  #portfolio-container {
-    display: grid;
-    align-items: center;
-    text-align: center;
-    overflow: auto;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
-    justify-content: center;
-    margin: auto;
-    max-width: 1200px;
-    padding: 50px 10px;
-  }
-
-  .portfolio-grid-container {
-    position: relative;
-    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.1);
-  }
-
-  .portfolio-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  & img {
     height: 100%;
-    opacity: 0;
+    width: auto;
+    max-height: 50px;
+    object-fit: scale-down;
+  }
+}
+.logos {
+  min-width: 300px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#portfolio {
+  $pink: var(--ruby);
+
+  & .text,
+  .bg .base {
+    color: var(--ruby);
   }
 
-  .portfolio-background {
-    height: 335px;
-    background-size: cover;
-    z-index: 1;
+  & span.base {
+    background: var(--dark-blue);
+  }
+}
+
+#portfolio p {
+  padding: 0px;
+  margin: 0px;
+}
+
+button {
+  background: none;
+  font-size: 25px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  box-shadow: none;
+  border: none;
+  color: var(--ruby);
+  min-width: 200px;
+  background-clip: content-box;
+
+  & #portfolio span .text {
+    color: var(--ruby);
   }
 
-  .portfolio-grid-container:hover {
-    & .portfolio-background {
-      filter: blur(3px) opacity(80%) brightness(30%);
-    }
-    & .darker {
-      filter: blur(3px) opacity(90%) brightness(50%);
-    }
+  &:hover {
+    cursor: pointer;
+  }
+}
+#portfolio p span.base {
+  border: 2px solid var(--ruby);
+  z-index: 4;
+}
+#portfolio p span.bg {
+  background: rgb(68, 94, 143);
+}
 
-    & .portfolio-content {
-      transition: opacity 0.8s ease;
-      opacity: 100;
-    }
+#evolving-cyborgs {
+  background-image: url("../assets/evolving-cyborgs.png");
+}
+
+#portfolio-ml-agents {
+  background-image: url("../assets/ML_Agents_scene.png");
+}
+#workshop-chat {
+  background-image: url("../assets/gu_chat/WorkshopChat.jpg");
+}
+
+#portfolio-container {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  padding: 50px 10px;
+  grid-gap: 20px;
+}
+
+.portfolio-grid-container {
+  position: relative;
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  opacity: 0;
+}
+
+.portfolio-background {
+  height: 335px;
+  background-size: cover;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.portfolio-grid-container:hover {
+  & .portfolio-background {
+    filter: blur(3px) opacity(80%) brightness(30%);
+  }
+  & .darker {
+    filter: blur(3px) opacity(90%) brightness(50%);
   }
 
-  /* .hexagon {
+  & .portfolio-content {
+    transition: opacity 0.8s ease;
+    opacity: 100;
+  }
+}
+
+/* .hexagon {
   width: 100px;
   height: 57.735px;
   background: var(--primary);
