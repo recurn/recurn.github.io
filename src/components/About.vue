@@ -33,27 +33,7 @@
     </div>
   </div>
 
-  <div id="interests">
-    <h1>Interests</h1>
-    <div id="interests-content">
-      <div>
-        <h3>Music</h3>
-        <img class="interest-icon" src="../assets/ukulele.png" alt="" />
-      </div>
-      <div>
-        <h3>D&D</h3>
-        <img class="interest-icon" src="../assets/dndDice.png" alt="" />
-      </div>
-      <div>
-        <h3>Meditation</h3>
-        <img class="interest-icon" src="../assets/meditation.png" alt="" />
-      </div>
-      <div>
-        <h3>Quantified Self</h3>
-        <img class="interest-icon" src="../assets/growth.png" alt="" />
-      </div>
-    </div>
-  </div>
+  
 </template>
 
 <script>
@@ -93,11 +73,7 @@
 </script>
 
 <style lang="scss">
-  .interest-icon {
-    filter: invert(9%) sepia(14%) saturate(343%) hue-rotate(358deg)
-      brightness(113%) contrast(103%);
-    max-width: 150px;
-  }
+
 
   .portrait {
     height: 80%;
@@ -123,32 +99,7 @@
   #about p {
     font-size: 20px;
   }
-  #interests {
-    color: var(--ivory);
-    margin: auto;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    padding: 20px;
-    margin: 0 auto;
-    background: var(--primary);
-  }
-
-  #interests h2 {
-    margin: 5px 10px;
-  }
-
-  #interests-content {
-    display: grid;
-    align-items: center;
-    text-align: center;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    justify-content: center;
-    margin: auto;
-    max-width: 1200px;
-    padding: 0px 1em;
-  }
+  
 
   #about {
     display: grid;
