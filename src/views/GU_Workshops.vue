@@ -111,15 +111,26 @@
         <div class="shadow-box">
           <h2>Reflections</h2>
           <p>
+            The very first time this app was tested with live students, a
+            critical problem became apparent immediately. The students were
+            spamming junk into the chat, rendering it unusable for its intended
+            purpose of communicating with instructors. <br />
+            To solve this problem, I first changed the title of the component
+            from "Chat" to "Help and Announcements". I also realized that there
+            was no need for students to be able to contact one another - they
+            have other ways of doing this and are often physically in the same
+            room as one another. So I added a way for instructors to add in and
+            use admin privilleges. Anyone who is not logged in can only see
+            their own messages and those sent by an admin. Admins can see all
+            messages. This effectively deplatformed the students and without an
+            audience to see their spam, the quantity of messages decreased
+            dramatically and the app began to fulfill its intended purpose.
+          </p>
+          <p>
             A possible future problem is if multiple workshops are running
             simultaneously and they are all trying to use the chat. This would
             get confusing quicly. It can be solved through adding in multiple
             different threads which can be selected from when choosing a name
-          </p>
-          <p>
-            As this app is still in early stages, I am not yet aware of any
-            additional bugs or issues with the implementation that I would wish
-            to improve with future versions.
           </p>
         </div>
       </div>
@@ -128,13 +139,13 @@
 </template>
 
 <script>
-  export default {};
+export default {};
 </script>
 
 <style>
-  #gu-workshop-bg {
-    width: 100%;
-    position: absolute;
-    background: #50c8eb;
-  }
+#gu-workshop-bg {
+  width: 100%;
+  position: absolute;
+  background: #50c8eb;
+}
 </style>

@@ -124,6 +124,10 @@ export default {
   margin: 20px auto;
   width: 80%;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+
+  & p {
+    text-align: left;
+  }
 }
 
 .message {
@@ -152,7 +156,7 @@ export default {
   padding: 0;
 
   border-top: none;
-  text-align: left;
+  text-align: left !important;
   // overflow: hidden;
   // transition: 0.5s ease all;
 }

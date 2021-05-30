@@ -18,7 +18,6 @@ export default {
         role="dialog"
         aria-labelledby="modalTitle"
         aria-describedby="modalDescription"
-        @click.prevent=""
       >
         <header class="modal-header" id="modalTitle">
           <slot name="header">
@@ -36,7 +35,7 @@ export default {
   </transition>
 </template>
 
-<style>
+<style lang="scss">
 .modal-container {
   position: fixed;
   top: 0;
@@ -67,8 +66,21 @@ export default {
   display: flex;
   flex-direction: column;
   z-index: 9999;
-  max-width: 60%;
-  min-width: 300px;
+  width: 60%;
+  max-width: 800px;
+  min-width: 350px;
+
+  & h3 {
+    padding-left: 10px;
+  }
+
+  & a {
+    color: var(--ruby);
+
+    &:active {
+      color: var(--primary);
+    }
+  }
 }
 
 .modal-header,

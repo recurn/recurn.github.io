@@ -75,7 +75,7 @@
     </Accordion>
     <Accordion :header="'Education'">
       <h3>BACHELOR OF ARTS, COGNITIVE SYSTEMS - PSYCHOLOGY</h3>
-      <p>UNIVERSITY OF BRITISH COLUMBIA | 2014 - 2021</p>
+      <p>UNIVERSITY OF BRITISH COLUMBIA | CLASS OF 2021</p>
       <ul>
         <li>
           Study of natural and artificial intelligence systems and how the two
@@ -206,7 +206,7 @@ export default {
       unityML: 4.5,
       firebase: 3.5,
       unity: 3.5,
-      react: 2.5,
+      react: 3,
     });
 
     const starStyle = ref({
@@ -221,7 +221,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .resume-rating {
   display: flex;
   align-items: center;
@@ -245,6 +245,10 @@ export default {
 
 #resume .accordion {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+
+  & p {
+    text-align: left !important;
+  }
 }
 
 #resume .message-header {
